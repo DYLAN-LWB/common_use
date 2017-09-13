@@ -381,7 +381,7 @@
       <workItem from="1505106459625" duration="498000" />
       <workItem from="1505201115454" duration="1762000" />
       <workItem from="1505269104468" duration="6160000" />
-      <workItem from="1505289122566" duration="432000" />
+      <workItem from="1505289122566" duration="441000" />
     </task>
     <task id="LOCAL-00001" summary="可缩放的图片(loading动画)">
       <created>1505270199358</created>
@@ -404,11 +404,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505289526293</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="列表多行文字适配">
+      <created>1505289561148</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1505289561148</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14777000" />
+    <option name="totallyTimeSpent" value="14786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="552" y="23" width="1343" height="1004" extended-state="0" />
