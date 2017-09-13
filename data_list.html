@@ -57,16 +57,15 @@
     var xueduan = param["xueduan"];
     var xueke = param["xueke"];
 
-    var _page = 1;  //分页
-    var _is_bottom = -1;    //避免添加多个提示
-    var _list_data = [];
-    var _mescroll;
+    var _mescroll;      //刷新控件
+    var _list_data;     //列表数据
+    var _page = 1;      //分页
+    var _is_bottom = -1;    //上拉到底标识,避免添加多个提示
 
     window.onload = function () {
 
         setupRefresh();
     };
-
 
     //下拉刷新和上拉加载
     function setupRefresh(){
@@ -126,11 +125,8 @@
                         }
 
                         //添加到底提示
-                        if(_list_data.length == 0) {
-                            document.getElementById("data_list").innerHTML += '<div id="bottom_remind">暂时没有数据</div>';
-                        } else {
-                            document.getElementById("data_list").innerHTML += '<div id="bottom_remind">我是有底线的</div>';
-                        }
+                        var remind = _list_data.length == 0 ? "暂时没有数据" : "我是有底线的";
+                        document.getElementById("data_list").innerHTML += '<div id="bottom_remind">remind</div>';
                     }
                 }
             },
