@@ -114,12 +114,10 @@
         <img class="right_image" src="image/right.png">
     </div>
 
-
     <!--遮罩-->
     <div id="over" class="over"></div>
     <!--loading动画-->
     <div id="layout" class="layout"><img src="http://files.jb51.net/file_images/article/201311/2013112931.gif" alt=""/></div>
-
 
 </body>
 
@@ -131,38 +129,30 @@
     var _image = document.getElementById("big_image");
 
     window.onload = function () {
-        showLoading();
         changeImage();
-
     };
-
 
     //更换图片弹出loading动画
     function leftButtonClick() {
         if(_index > 1) {
             _index -=1;
-            showLoading();
-            changeImage();
         } else if(_index == 1) {
             _index = 4;
-            showLoading();
-            changeImage();
         }
+        changeImage();
     }
 
     function rightButtonClick() {
         if(_index < _image_count) {
             _index +=1;
-            showLoading();
-            changeImage();
         }else if(_index == _image_count) {
             _index = 1;
-            showLoading();
-            changeImage();
         }
+        changeImage();
     }
 
     function changeImage() {
+        showLoading();
 
         _image.src = "image/zoom_" + _index + ".jpeg";
 
