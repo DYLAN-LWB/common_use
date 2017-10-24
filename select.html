@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #EBEBEB">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉刷新,上拉加载更多</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name = "format-detection" content = "telephone=no">
+
+    <link rel="stylesheet" href="common/common.css">
+    <link rel="stylesheet" href="vendor/select_box.css">
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://g.alicdn.com/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script type="text/javascript" src="common/common.js"></script>
+    <script type="text/javascript" src="vendor/select_box.js"></script>
+    <style>
+
+    </style>
+
+</head>
+
+<body style="margin:auto;">
+
+    <div id="select_box"></div>
+
+</body>
+
+<script>
+window.onload = function () {
+    document.title = "title";
+
+    var select_data = [
+            { id : "1", name : "天数-从小到大" },
+            { id : "2", name : "天数-从大到小" },
+            { id : "3", name : "印数-从小到大" },
+            { id : "4", name : "印数-从大到小" },
+            { id : "5", name : "报警时间" }      
+        ];
+    var select_str = "";
+    for (var index = 0; index < select_data.length; index++) {
+        select_str += '<option value="'+select_data[index]["id"]+'">'+select_data[index]["name"]+'</option>';
+    }
+
+    document.getElementById("select_box").innerHTML = 
+    '<div class="select_bg"><select id="select1" style="width: 100%;">'+select_str+'</select></div>';
+
+    $('#select1').selectBox({change: change });
+
+};
+
+var change = function (data) {
+    console.log('selected:', data);
+
+};
+   
+</script>
+
+</html>
